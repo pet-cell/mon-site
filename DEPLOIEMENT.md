@@ -22,3 +22,9 @@ Modifier et tester sur l’ordinateur comme avant. Dans GitHub Desktop, donner u
 Le dossier dist est généré et ignoré par Git. Les originaux sauvegardés, les secrets, les lanceurs locaux et les vérifications restent sur cet ordinateur. Ne pas envoyer tout le dossier manuellement avec le navigateur : utiliser GitHub Desktop pour respecter le .gitignore et transférer les vidéos volumineuses.
 
 Préparation locale facultative : node scripts/build-pages.cjs. Le fonctionnement habituel via lancer-site.cmd reste disponible.
+
+## Cache des mises à jour
+
+La préparation attribue un nom contenant une empreinte de version aux scripts, styles et composants. Chaque modification de ces fichiers produit de nouvelles adresses, pour éviter de mélanger des fichiers anciens et nouveaux. Les sources utilisées en local restent lisibles et gardent leurs noms habituels. scripts/version-assets.cjs doit rester suivi avec scripts/build-pages.cjs et le chargeur des composants.
+
+Après publication, https://TON-PSEUDO.github.io/atelier/version.json indique la version servie et le commit publié. Remplacer TON-PSEUDO et atelier par le compte et le dépôt choisis. Une page déjà ouverte peut nécessiter un rechargement pour charger la nouvelle version HTML.

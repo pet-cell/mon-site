@@ -44,4 +44,5 @@ for (const entry of publicEntries) {
 const catalogue = { rapports: listPdf('rapports'), presentations: listPdf('presentations') };
 fs.writeFileSync(path.join(output, 'assets', 'pdf', 'catalogue.json'), JSON.stringify(catalogue, null, 2) + '\n');
 fs.writeFileSync(path.join(output, '.nojekyll'), '');
-console.log(`Publication préparée dans dist : ${catalogue.rapports.length} rapports, ${catalogue.presentations.length} présentations.`);
+const version = require('./version-assets.cjs')(output);
+console.log(`Publication ${version} préparée dans dist : ${catalogue.rapports.length} rapports, ${catalogue.presentations.length} présentations.`);
