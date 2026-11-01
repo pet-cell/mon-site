@@ -1,0 +1,77 @@
+# Secrets et configurations privées
+.env
+.env.*
+!.env.example
+!.env.*.example
+.secrets/
+secrets/
+credentials/
+*.local
+*.local.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+credentials*.json
+*service-account*.json
+*service_account*.json
+application_default_credentials.json
+.aws/
+.ssh/
+
+# Originaux et fichiers de travail : ne pas publier
+.asset-originals/
+.asset-work/
+
+# Dépendances, caches et journaux
+node_modules/
+.npm/
+.cache/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers temporaires et sauvegardes d’éditeur
+tmp/
+.temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Réglages personnels et fichiers système
+.idea/
+.codex/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Authentification, cookies et exports de sessions
+auth.json
+cookies*.json
+cookies*.txt
+session*.json
+sessions*.json
+storageState*.json
+storage-state*.json
+.auth/
+.sessions/
+*.har
+
+# Vérifications et outils réservés au poste local
+verify*
+/preview.cjs
+/lancer-site.cmd
+/scripts/local/
+
+# Site généré automatiquement par GitHub Pages
+/dist/

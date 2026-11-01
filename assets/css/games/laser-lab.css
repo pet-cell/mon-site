@@ -1,0 +1,78 @@
+:host { display:block; container-type:inline-size; --bg:#08121e; --panel:#102236; --line:#365064; --text:#eee4cf; --muted:#a2b4c2; --accent:#d98d60; --cyan:#56d9ed; --green:#91d9a0; }
+* { box-sizing:border-box; }[hidden] { display:none!important; }
+.laser-lab { color:var(--text); background:var(--bg); border:1px solid #b8724e; font:13px Arial,Helvetica,sans-serif; }
+.lab-header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px; border-bottom:1px solid var(--line); }
+h2,h3,p { margin:0; }h2 { font-size:24px; font-weight:400; }h3 { font-size:12px; font-weight:500; }.eyebrow { color:var(--accent); font-size:9px; letter-spacing:.18em; margin-bottom:8px; }#game-status { max-width:300px; font-size:11px; line-height:1.6; color:var(--muted); }.lab-header .won { color:var(--green)!important; }
+.lab-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(210px,.95fr); grid-template-areas:'bench bench target' 'bench bench metrics' 'mirror diaphragm difficulty'; gap:12px; padding:12px; align-items:start; }
+.panel { min-width:0; background:var(--panel); border:1px solid var(--line); }.workspace { grid-area:bench; }.target-panel { grid-area:target; }.metrics-panel { grid-area:metrics; }.difficulty-panel { grid-area:difficulty; }.mirror-panel { grid-area:mirror; }.diaphragm-panel { grid-area:diaphragm; }
+.panel-heading { display:flex; justify-content:space-between; align-items:center; gap:8px; padding:13px; border-bottom:1px solid var(--line); }.panel-heading>span,.panel-heading>output { color:var(--accent); font-size:10px; }
+.view-tabs { display:flex; flex-wrap:wrap; gap:6px; padding:10px; }.view-tabs button { flex:1; min-width:100px; }button,select { font:inherit; border:1px solid #688091; color:var(--text); background:#142f47; padding:9px; }button { cursor:pointer; }button:hover { background:#24465e; }button:active { transform:translate(1px,1px); }button[aria-pressed=true] { border-color:var(--accent); color:#f5bd8c; background:#493325; }button:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+canvas { display:block; width:100%; background:#080f18; }#bench { height:420px; touch-action:pan-y; }#target { height:195px; }#mirror-detail,#diaphragm-detail { height:125px; margin:12px auto; width:calc(100% - 24px); }.hint { padding:12px; color:var(--muted); font-size:10px; line-height:1.7; }
+.metrics { display:grid; grid-template-columns:1fr 1fr; gap:13px; padding:14px; }.metrics span { display:block; color:var(--muted); font-size:9px; line-height:1.5; }.metrics strong { display:block; font-size:16px; font-weight:400; margin-top:5px; font-variant-numeric:tabular-nums; }
+label { display:block; margin:12px 12px 6px; font-size:10px; color:var(--muted); }select { margin:0 12px; width:calc(100% - 24px); }.controls { padding:0 12px 12px; }.control { margin-top:12px; }.control label { display:flex; justify-content:space-between; align-items:center; gap:8px; margin:0 0 7px; color:var(--text); }.control output { color:var(--cyan); font-variant-numeric:tabular-nums; }input[type=range] { width:100%; accent-color:var(--accent); cursor:pointer; }.control small { color:var(--muted); font-size:9px; }
+#difficulty { width:calc(100% - 24px); margin:18px 12px 0; }.level-ticks { display:flex; justify-content:space-between; margin:2px 17px 14px; color:var(--muted); font-size:10px; }#level-description { margin:12px; color:var(--muted); font-size:11px; line-height:1.8; }.action-button { margin:5px 12px 15px; width:calc(100% - 24px); background:#ad4829; }.empty { padding:25px 14px; color:var(--muted); line-height:1.8; font-size:12px; }.sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); }
+@media(prefers-reduced-motion:reduce) { button:active { transform:none; } }
+/* Disposition commune ordinateur et téléphone en paysage. */
+
+    .lab-header { padding:10px 14px; gap:14px; }
+    .lab-header h2 { font-size:18px; }
+    .lab-header .eyebrow { font-size:8px; margin-bottom:3px; }
+    #game-status { font-size:10px; line-height:1.4; }
+    .lab-grid { grid-template-areas:'bench bench bench bench target target' 'bench bench bench bench metrics metrics' 'bench bench bench bench difficulty difficulty' 'mirror mirror mirror diaphragm diaphragm diaphragm'; grid-template-columns:repeat(4,minmax(0,1fr)) repeat(2,minmax(105px,.95fr)); gap:8px; padding:8px; }
+    .panel-heading { padding:7px 9px; gap:6px; }
+    .panel-heading h3 { font-size:11px; }
+    .view-tabs { padding:6px 8px; gap:5px; }
+    .view-tabs button { padding:6px; font-size:11px; }
+    .workspace > .hint { padding:6px 8px; font-size:9px; line-height:1.4; }
+    #target { height:135px; }
+    .metrics { gap:7px 10px; padding:9px; }
+    .metrics span { font-size:9px; line-height:1.25; }
+    .metrics strong { font-size:14px; margin-top:2px; }
+    .difficulty-panel #difficulty { margin:9px 9px 0; width:calc(100% - 18px); }
+    .level-ticks { margin:0 12px 5px; font-size:9px; }
+    #level-description { margin:5px 9px; font-size:10px; line-height:1.35; }
+    .action-button { margin:4px 9px 7px; width:calc(100% - 18px); padding:6px; font-size:10px; }
+    .mirror-panel { display:grid; grid-template-columns:minmax(100px,.8fr) minmax(0,1.2fr); column-gap:8px; }
+    .mirror-panel > .panel-heading,.mirror-panel select,.mirror-panel .hint { grid-column:1 / -1; }
+    .mirror-panel label[for="mirror-select"],.diaphragm-panel label[for="diaphragm-select"] { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+    #diaphragm-content { display:grid; grid-template-columns:minmax(100px,.8fr) minmax(0,1.2fr); column-gap:8px; }
+    #diaphragm-content > select { grid-column:1 / -1; }
+    #mirror-select,#diaphragm-select { margin:6px 8px; width:calc(100% - 16px); padding:5px 7px; font-size:11px; }
+    #mirror-detail,#diaphragm-detail { height:120px; margin:4px 0 4px 7px; width:calc(100% - 7px); align-self:start; }
+    .controls { padding:0 8px 7px 0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:9px; row-gap:5px; align-items:start; }
+    .control { margin-top:3px; min-width:0; }
+    .control label { margin-bottom:2px; font-size:9px; line-height:1.3; flex-wrap:wrap; gap:2px 5px; }
+    .control input { margin:3px 0; }
+    .control small { display:block; font-size:8px; line-height:1.25; }
+    .mirror-panel .hint { padding:4px 8px 7px; font-size:9px; line-height:1.35; }
+    .empty { padding:12px; font-size:11px; line-height:1.5; }
+
+.orientation-notice { display:none; padding:34px 22px; border:1px solid var(--accent); color:var(--text); background:var(--panel); text-align:center; }
+.orientation-notice svg { width:62px; height:62px; color:var(--accent); margin-bottom:18px; }
+.orientation-notice h2 { margin-bottom:14px; font-size:22px; }
+.orientation-notice p { font-size:14px; line-height:1.7; max-width:320px; }
+@media(max-width:650px) and (orientation:portrait), (max-width:950px) and (pointer:coarse) and (orientation:portrait) {
+  .laser-lab { display:none; }
+  .orientation-notice { display:flex; flex-direction:column; align-items:center; }
+}
+
+.game-stage { display:contents; }
+/* La hauteur réserve une vue de jeu dans le flux de la page, sans masquer le site. */
+:host(.landscape-game) { display:block; box-sizing:border-box; height:calc(125svh - 45px); }
+:host(.landscape-game) .game-stage { display:block; position:relative; height:100%; width:100%; overflow:hidden; }
+:host(.landscape-game) .laser-lab { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(var(--game-fit-scale,0)); transform-origin:center; }
+
+/* Textes plus lisibles dans la grille réduite du téléphone en paysage. */
+:host(.landscape-game) .panel-heading h3 { font-size:14px; }
+:host(.landscape-game) .panel-heading > span,
+:host(.landscape-game) .panel-heading > output,
+:host(.landscape-game) .control label,
+:host(.landscape-game) .metrics span { font-size:12px; }
+:host(.landscape-game) .control small { font-size:10px; }
+:host(.landscape-game) #game-status,
+:host(.landscape-game) #level-description,
+:host(.landscape-game) .hint { font-size:12px; }
+:host(.landscape-game) .metrics strong { font-size:18px; }
+:host(.landscape-game) select,
+:host(.landscape-game) .view-tabs button,
+:host(.landscape-game) .action-button { font-size:14px; }

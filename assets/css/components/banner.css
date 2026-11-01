@@ -1,0 +1,35 @@
+.banner { margin-left: 23%; padding: 22px 30px; min-height: 100px; display: flex; justify-content: space-between; align-items: center; gap: 24px; background: rgba(6,23,46,.9); border: 1px solid #b96d49; box-shadow: 7px 7px 0 #020d1c88; }
+.brand { display: flex; gap: 16px; align-items: center; text-decoration: none; font-weight: 700; letter-spacing: .22em; font-size: 20px; }
+.brand small { display: block; margin-top: 8px; font-size: 10px; font-weight: 400; letter-spacing: .1em; color: #b3b6b6; }
+.banner-label { font-size: 10px; letter-spacing: .16em; }
+.banner-label span { color: #df895a; padding: 0 10px; }
+@media(max-width:1000px) {
+.banner { margin-left: 0; }
+}
+@media(max-width:650px) {
+.banner { padding: 16px; }
+}
+@media(max-width:650px) {
+.banner-label { display: none; }
+}
+@media(max-width:650px) {
+.brand { font-size: 17px; }
+}
+.banner { position: relative; }
+.brand { cursor: default; }
+
+.banner-back:hover { animation: none; }
+
+@media(max-width:1000px) {
+body:not([data-page="accueil"]) .banner { margin-left: 52px; }
+}
+.banner-image { width: 56px; height: 56px; flex-shrink: 0; object-fit: contain; }
+.banner-back { position: fixed; left: 6vw; right: auto; top: 64px; width: 52px; height: 44px; transform: none; z-index: 5; }
+.banner-back svg { width: 32px; height: 24px; }
+.banner-back:active { transform: translate(2px,2px); }
+@media(max-width:1000px) {
+.banner-back { left: 4vw; top: 52px; width: 42px; }
+}
+@media(max-width:650px) {
+.banner-back { left: 12px; top: 42px; width: 40px; }
+}

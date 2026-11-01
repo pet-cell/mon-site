@@ -1,0 +1,66 @@
+.info-panel { position: fixed; top: 190px; left: 6vw; width: 19vw; max-width: 280px; min-height: 345px; padding: 23px; background: rgba(5,20,38,.95); border: 1px solid #a45d3d; display: flex; flex-direction: column; box-shadow: 6px 6px 0 #020c1b66; }
+.info-topline { display: flex; justify-content: space-between; gap: 10px; font-size: 9px; letter-spacing: .15em; color: #aeb6ba; border-bottom: 1px solid #50607066; padding-bottom: 18px; }
+.info-copy { padding-top: 22px; flex: 1; }
+.info-copy .eyebrow { color: #dc8b5e; }
+.info-copy h2 { font-weight: 400; font-size: 27px; line-height: 1.18; letter-spacing: -.035em; margin: 16px 0; }
+.info-copy > p:last-child { color: #adb8c1; font-size: 12px; line-height: 1.9; }
+.info-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+.next-info { width: 42px; height: 38px; border: 1px solid #c27850; color: var(--cream); background: #ad4829; cursor: pointer; transition: background .3s; }
+.next-info:hover { background: #d5784c; }
+.next-info:hover span { transform: translateX(4px); }
+.next-info:active span { transform: translateX(8px); }
+.info-copy.changing { animation: change-copy .3s ease; }
+@keyframes change-copy { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@media(max-width:1000px) {
+.info-panel { left: 4vw; width: 23vw; padding: 18px; }
+}
+@media(max-width:650px) {
+.info-panel { position: relative; inset: auto; width: 100%; max-width: none; min-height: 0; margin-top: 24px; padding: 20px; }
+}
+@media(max-width:650px) {
+.info-copy { padding-top: 10px; }
+}
+@media(max-width:650px) {
+.info-copy h2 { font-size: 25px; }
+}
+@media(max-width:650px) {
+.info-controls { margin-top: 8px; }
+}
+.info-controls { justify-content: center; gap: 18px; }
+#info-count { font-size: 12px; font-variant-numeric: tabular-nums; }
+.next-info:hover { animation: button-shake .2s linear; }
+.info-illustration { height: 65px; margin-top: 16px; overflow: hidden; position: relative; background: #13344c; }
+@media(max-width:650px) {
+.info-illustration { height: 45px; }
+}
+.info-controls button:disabled { opacity: .4; cursor: default; animation: none; }
+.info-illustration img { width:100%; height:100%; object-fit:cover; display:block; }
+#info-description { white-space:pre-line; overflow-wrap:anywhere; }
+#info-description a { color:#efb68d; text-underline-offset:3px; }
+.info-panel { max-height:calc(100svh - 210px); overflow-y:auto; }
+.info-illustration,.info-controls { flex-shrink:0; }
+@media(max-width:650px) { .info-panel { max-height:none; overflow:visible; } }
+/* Sur téléphone, le carnet est une bulle d’information non modale. */
+.info-toggle,.info-close { display:none; }
+@media(max-width:650px), (max-width:950px) and (pointer:coarse) {
+  .info-toggle { position:fixed; z-index:8; left:4vw; top:var(--mobile-info-top,clamp(88px,21svh,190px)); bottom:auto; display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid #d5784c; border-radius:50%; background:#10283e; color:#eee4cf; box-shadow:3px 3px 0 #020b1788; cursor:pointer; }
+  .info-toggle span { font:bold italic 25px Georgia,serif; }
+  .info-toggle[aria-expanded="true"] { background:#ad4829; }
+  .info-panel { position:fixed; inset:auto; left:4vw; top:calc(var(--mobile-info-top,clamp(88px,21svh,190px)) + 54px); bottom:auto; z-index:8; width:clamp(260px,72vw,340px); max-width:92vw; height:clamp(240px,40svh,380px); max-height:calc(100svh - var(--mobile-info-top,clamp(88px,21svh,190px)) - 70px); min-height:0; margin:0; padding:12px; border-radius:18px; overflow:hidden; box-shadow:0 8px 30px #0008; }
+  .info-panel:not(.is-open) { display:none; }
+  .info-close { display:grid; place-items:center; border:0; padding:0; width:30px; height:30px; background:transparent; color:#eee4cf; font-size:24px; cursor:pointer; }
+  .info-topline { padding-bottom:4px; align-items:center; min-height:30px; flex-shrink:0; font-size:9px; }
+  .info-illustration { height:28px; margin-top:6px; }
+  .info-copy { min-height:0; overflow-y:auto; overscroll-behavior:contain; padding-top:5px; scrollbar-width:thin; }
+  .info-copy .eyebrow { margin:4px 0; font-size:9px; }
+  .info-copy h2 { margin:6px 0; font-size:18px; line-height:1.2; }
+  .info-copy #info-description { margin:7px 0; font-size:12px; line-height:1.5; }
+  .info-controls { gap:12px; margin-top:7px; }
+  .info-controls .arrow-button { width:32px; height:30px; }
+  #info-count { font-size:11px; }
+}
+
+/* Dégager le bouton retour en paysage, y compris sur les écrans peu hauts. */
+@media(max-width:650px) and (orientation:landscape), (max-width:950px) and (pointer:coarse) and (orientation:landscape) {
+  .info-toggle,.info-panel { --mobile-info-top:calc(112px + env(safe-area-inset-top,0px)); }
+}

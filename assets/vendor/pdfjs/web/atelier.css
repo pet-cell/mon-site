@@ -1,0 +1,5 @@
+:root { --toolbar-bg-color: #10283e; --toolbar-icon-bg-color: #eee4cf; --toolbar-icon-hover-bg-color: #e59663; --body-bg-color: #06172e; --field-bg-color: #eee4cf; --field-color: #12253a; }
+#toolbarContainer { border-bottom: 1px solid #b8724e; }
+/* Consultation uniquement : aucune commande d’édition, d’enregistrement ou d’impression. */
+#editorModeButtons, #printButton, #downloadButton, #secondaryOpenFile,
+#secondaryPrint, #secondaryDownload, #editorUndoBar { display: none !important; }

@@ -1,0 +1,5 @@
+.arrow-button { display: inline-grid; place-items: center; width: 36px; height: 34px; padding: 0; border: 1px solid #c27850; background: #ad4829; color: #eee4cf; cursor: pointer; box-shadow: 3px 3px 0 #020b17; }
+.arrow-button:hover { animation: button-shake .2s linear; background: #c5663f; }
+.arrow-button:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 #020b17; animation: none; }
+@keyframes button-shake { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-5deg); } 75% { transform: rotate(5deg); } }
+.arrow-button svg { width: 24px; height: 20px; }

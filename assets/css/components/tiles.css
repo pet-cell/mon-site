@@ -1,0 +1,48 @@
+.explorations { padding-top: 38px; scroll-margin-top: 24px; }
+.tile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.project-tile { height: 250px; display: block; position: relative; overflow: hidden; isolation: isolate; border: 1px solid #c7815588; padding: 0; color: var(--cream); text-align: left; cursor: pointer; background: #18374d; }
+.tile-art { position: absolute; inset: 0; z-index: -1; transition: transform .5s; }
+.tile-band { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); height: 53px; background: #06172eea; border-block: 1px solid #d58b6177; display: grid; grid-template-columns: 1fr auto; align-content: center; gap: 0 12px; padding: 0 20px; transition: height .35s ease,background .35s ease; }
+.tile-band > span:first-child { font-size: 21px; letter-spacing: -.025em; }
+.tile-mark { color: #df986d; font-size: 22px; }
+.tile-band small { opacity: 0; max-height: 0; overflow: hidden; font-size: 11px; line-height: 1.5; color: #c8c9c4; transition: opacity .3s,max-height .35s,margin .35s; }
+.project-tile:hover .tile-band,.project-tile:focus-visible .tile-band { height: 77px; }
+.project-tile[aria-expanded="true"] .tile-band { height: 100%; background: #06172ef2; }
+.project-tile:hover .tile-band small,.project-tile:focus-visible .tile-band small,.project-tile[aria-expanded="true"] .tile-band small { opacity: 1; max-height: 55px; margin-top: 8px; }
+.project-tile:hover .tile-art { transform: scale(1.04); }
+@media(max-width:1000px) {
+.tile-grid { gap: 18px; }
+}
+@media(max-width:1000px) {
+.project-tile { height: 210px; }
+}
+@media(max-width:650px) {
+.project-tile { height: 210px; }
+}
+@media(max-width:650px) {
+.tile-band { padding: 0 12px; }
+}
+@media(max-width:650px) {
+.tile-band > span:first-child { font-size: 17px; }
+}
+a.project-tile { text-decoration: none; }
+a.project-tile:active .tile-band { height: 100%; }
+.project-tile .tile-band>span:first-child { font-size: clamp(14px,1.8vw,21px); }
+img.tile-art { width:100%; height:100%; object-fit:cover; display:block; }
+@media(max-width:650px), (max-width:950px) and (pointer:coarse) {
+  .project-tile[aria-expanded="true"] .tile-art { transform:scale(1.04); }
+}
+
+@media(max-width:650px), (max-width:950px) and (pointer:coarse) {
+  .tile-grid { gap:14px; }
+  .project-tile { height:auto; aspect-ratio:8 / 5; }
+  .tile-band { transition:height .35s ease,background .35s ease; }
+}
+@media(max-width:480px) {
+  .tile-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .project-tile { aspect-ratio:8 / 5; }
+  .tile-band { height:42px; padding:0 8px; column-gap:5px; }
+  .tile-mark { font-size:17px; }
+  .project-tile .tile-band > span:first-child { font-size:12px; line-height:1.2; }
+  .tile-band small { font-size:10px; line-height:1.3; }
+}
