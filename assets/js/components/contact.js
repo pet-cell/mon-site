@@ -6,6 +6,7 @@ const icons = {
 export function mountContact(page) {
   const settings=page.contact || {};
   const profiles=settings.profiles || [];
+  const copyText=settings.emailCopyText ?? settings.email;
   const host=document.getElementById('social-links');
   const button=document.getElementById('copy-email');
   host.replaceChildren(...profiles.map(profile=>{
@@ -29,25 +30,25 @@ export function mountContact(page) {
     clearTimeout(fadeTimer);clearTimeout(hideTimer);
     status.dataset.state=copied?'success':'error';
     status.dataset.phase='visible';
-    status.textContent=copied?'ask to git owner':'Le navigateur a refusé la copie. Réessayez en autorisant l’accès au presse-papiers.';
+    status.textContent=copied?'Mail copié':'Le navigateur a refusé la copie. Réessayez en autorisant l’accès au presse-papiers.';
     status.hidden=false;
     if(copied) {
       fadeTimer=setTimeout(()=>{status.dataset.phase='fading';},1700);
       hideTimer=setTimeout(()=>{status.hidden=true;status.textContent='';},2000);
     }
   }
-  button.disabled=settings.emailCopyEnabled===false || !settings.email;
+  button.disabled=settings.emailCopyEnabled===false || !copyText;
   button.setAttribute('aria-label',button.disabled?'Mail — indisponible':'Copier l’adresse e-mail');
   button.title=button.disabled?'Mail indisponible':'Copier l’adresse e-mail';
   if(button.disabled)return;
   button.addEventListener('click',async()=>{
     try {
-      await navigator.clipboard.writeText(settings.email);
+      await navigator.clipboard.writeText(copyText);
       notify(true);
     }catch {
       let copied=false;
       const field=document.createElement('textarea');
-      field.value=settings.email;
+      field.value=copyText;
       field.setAttribute('aria-hidden','true');field.tabIndex=-1;
       field.style.cssText='position:fixed;opacity:0;pointer-events:none;';
       try {
