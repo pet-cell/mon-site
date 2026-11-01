@@ -518,6 +518,7 @@ export const pages = {
     },
     "contact": {
       "email": "docteurgames0@gmail.com",
+      "emailCopyEnabled": true,
       "heading": "Écrivons la suite.",
       "description": "Une question ou un projet ? Laissez-moi un message.",
       "profiles": [
