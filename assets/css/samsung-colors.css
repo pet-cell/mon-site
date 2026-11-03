@@ -1,0 +1,37 @@
+/* Essai Samsung uniquement. Les aplats sont peints comme des images PNG ;
+   les contenus, les proportions et les couleurs des autres navigateurs restent natifs.
+   Ne pas utiliser forced-color-adjust:none : préserver le mode contraste accessible. */
+html[data-samsung-colors] .arrow-button {
+  background-image:url('../images/interface/aplat-orange.png');
+  background-size:100% 100%;
+}
+html[data-samsung-colors] .arrow-button:hover { background-image:url('../images/interface/aplat-orange-hover.png'); }
+html[data-samsung-colors] :is(.social-link,.info-toggle,.calendar-popup) {
+  background-image:url('../images/interface/aplat-bleu.png'); background-size:100% 100%;
+}
+html[data-samsung-colors] :is(.social-link:hover,.info-toggle[aria-expanded="true"]) { background-image:url('../images/interface/aplat-orange.png'); }
+html[data-samsung-colors] .social-link:disabled:hover { background-image:url('../images/interface/aplat-bleu.png'); }
+/* Le remplissage explicite vise le texte, sans le remplacer par une image. */
+html[data-samsung-colors] .home { -webkit-text-fill-color:#eee4cf; }
+html[data-samsung-colors] .intro { -webkit-text-fill-color:#12253a; }
+html[data-samsung-colors] .intro-copy > p { -webkit-text-fill-color:#52606a; }
+html[data-samsung-colors] .brand small { -webkit-text-fill-color:#b3b6b6; }
+html[data-samsung-colors] .info-topline { -webkit-text-fill-color:#aeb6ba; }
+html[data-samsung-colors] .info-copy .eyebrow { -webkit-text-fill-color:#dc8b5e; }
+html[data-samsung-colors] #info-description { -webkit-text-fill-color:#adb8c1; }
+html[data-samsung-colors] #info-description a { -webkit-text-fill-color:#efb68d; }
+html[data-samsung-colors] .tile-mark { -webkit-text-fill-color:#df986d; }
+html[data-samsung-colors] .tile-band small { -webkit-text-fill-color:#c8c9c4; }
+html[data-samsung-colors] .project-picker legend { -webkit-text-fill-color:#dba179; }
+html[data-samsung-colors] .project-content { -webkit-text-fill-color:#12253a; }
+html[data-samsung-colors] .project-summary { -webkit-text-fill-color:#56616a; }
+html[data-samsung-colors] .project-content figcaption { -webkit-text-fill-color:#62717b; }
+html[data-samsung-colors] #document-select { -webkit-text-fill-color:#12253a; }
+html[data-samsung-colors] .calendar-grid b { -webkit-text-fill-color:#df986d; }
+html[data-samsung-colors] .mini-today { -webkit-text-fill-color:#ad4829; }
+html[data-samsung-colors] .contact-card #contact-status { -webkit-text-fill-color:#c5ffd0; }
+html[data-samsung-colors] #contact-status[data-state="error"] { -webkit-text-fill-color:#ffe0c9; }
+html[data-samsung-colors] :is(.arrow-button,.info-toggle,.info-close,.social-link) { -webkit-text-fill-color:#eee4cf; }
+@media (forced-colors:active) {
+  html[data-samsung-colors] .home, html[data-samsung-colors] .home * { -webkit-text-fill-color:currentColor; background-image:none; }
+}
