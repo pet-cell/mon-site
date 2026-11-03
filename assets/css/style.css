@@ -1,5 +1,6 @@
 /* Point d’entrée des styles ; chaque zone a son propre fichier. */
 @import url('./base.css');
+@import url('./theme.css');
 @import url('./components/buttons.css');
 @import url('./components/banner.css');
 @import url('./components/intro.css');

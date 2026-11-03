@@ -1,0 +1,25 @@
+/* Thèmes déclarés explicitement : même identité visuelle en clair et en sombre. */
+:root {
+  color-scheme:light dark;
+  --navy:#06172e;
+  --orange:#ad4829;
+  --orange-light:#d5784c;
+  --orange-shadow:rgba(68,20,14,.78);
+  --cream:#eee4cf;
+  --ink:#12253a;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    color-scheme:dark;
+  --navy:#06172e;
+  --orange:#ad4829;
+  --orange-light:#d5784c;
+  --orange-shadow:rgba(68,20,14,.78);
+  --cream:#eee4cf;
+  --ink:#12253a;
+  }
+}
+html,body { background-color:var(--navy); }
+.home { color:var(--cream); }
+/* Ces surfaces restent claires dans les deux thèmes. */
+.intro,.project-content,#document-select { color-scheme:light; }

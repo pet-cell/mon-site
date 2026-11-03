@@ -4,7 +4,55 @@
 #editorModeButtons, #printButton, #downloadButton, #secondaryOpenFile,
 #secondaryPrint, #secondaryDownload, #editorUndoBar { display: none !important; }
 
-/* Personnalisation locale : palette fixe, y compris si des préférences PDF.js étaient enregistrées. */
-:root { color-scheme:only light !important; --button-disabled-opacity:.4; --hover-filter:brightness(.9); }
+/* Personnalisation locale : thèmes clair et sombre, sans inversion de la palette. */
+:root { color-scheme:light dark !important; --button-disabled-opacity:.4; --hover-filter:brightness(.9); }
 .toolbar,#numPages { color:#eee4cf; }
 button,input,select,textarea { -webkit-text-fill-color:currentColor; }
+
+:root {
+    --main-color:#eee4cf;
+    --text-primary-color:#eee4cf;
+    --text-secondary-color:#a2b4c2;
+    --toolbar-bg-color:#10283e;
+    --toolbar-icon-bg-color:#eee4cf;
+    --toolbar-icon-hover-bg-color:#e59663;
+    --body-bg-color:#06172e;
+    --field-bg-color:#eee4cf;
+    --field-color:#12253a;
+    --doorhanger-bg-color:#10283e;
+    --doorhanger-border-color:#b8724e;
+    --doorhanger-hover-color:#eee4cf;
+    --sidebar-bg-color:#10283e;
+    --sidebar-toolbar-bg-color:#10283e;
+    --button-secondary-bg-color:#142f47;
+    --button-secondary-fg-color:#eee4cf;
+    --dialog-bg-color:#10283e;
+    --dialog-fg-color:#eee4cf;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    color-scheme:dark !important;
+    --main-color:#eee4cf;
+    --text-primary-color:#eee4cf;
+    --text-secondary-color:#a2b4c2;
+    --toolbar-bg-color:#10283e;
+    --toolbar-icon-bg-color:#eee4cf;
+    --toolbar-icon-hover-bg-color:#e59663;
+    --body-bg-color:#06172e;
+    --field-bg-color:#eee4cf;
+    --field-color:#12253a;
+    --doorhanger-bg-color:#10283e;
+    --doorhanger-border-color:#b8724e;
+    --doorhanger-hover-color:#eee4cf;
+    --sidebar-bg-color:#10283e;
+    --sidebar-toolbar-bg-color:#10283e;
+    --button-secondary-bg-color:#142f47;
+    --button-secondary-fg-color:#eee4cf;
+    --dialog-bg-color:#10283e;
+    --dialog-fg-color:#eee4cf;
+  }
+}
+input,select { color-scheme:light; }
+
+.popupMenu { --menu-bg:#10283e; --menu-text-color:#eee4cf; --menu-border-color:#b8724e; --menuitem-focus-border-color:#e59663; }
+.dialog { --dialog-bg-color:#10283e; --dialog-border-color:#b8724e; --text-secondary-color:#a2b4c2; --textarea-bg-color:#eee4cf; --textarea-fg-color:#12253a; color:#eee4cf; }
