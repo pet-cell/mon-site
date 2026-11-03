@@ -27,7 +27,7 @@ export function mountPdfViewer() {
     viewer.src = url.href;
     timer = setTimeout(() => {
       status.hidden = false;
-      status.textContent = 'Le visionneur ne répond pas. Rechargez la page pour réessayer.';
+      status.textContent = 'Le chargement du PDF prend plus de temps que prévu. Patientez ou sélectionnez un autre document.';
     }, 30000);
   }
   // Le contrôleur classique s’exécute aussi sur file:// pour expliquer le blocage,
@@ -41,18 +41,24 @@ export function mountPdfViewer() {
       return;
     }
     try {
+      async function readCatalogue(url) {
+        const controller=new AbortController();
+        const timeout=setTimeout(()=>controller.abort(),10000);
+        try {
+          const response=await fetch(url,{signal:controller.signal,cache:'no-store'});
+          if(!response.ok)throw new Error('Catalogue indisponible ('+response.status+')');
+          return await response.json();
+        }finally{clearTimeout(timeout);}
+      }
       let catalogue;
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10000);
-      try {
-        const response = await fetch('../api/documents', {signal:controller.signal,cache:'no-store'});
-        if (!response.ok) throw new Error('Catalogue automatique indisponible');
-        catalogue = await response.json();
-      } catch {
-        const response = await fetch(new URL('catalogue.json', pdfRoot), {signal:controller.signal,cache:'no-store'});
-        if (!response.ok) throw new Error('Liste des PDF introuvable');
-        catalogue = await response.json();
-      } finally { clearTimeout(timeout); }
+      const staticUrl=new URL('catalogue.json',pdfRoot);
+      if(new URL(location.href).hostname.endsWith('.github.io')) {
+        // GitHub Pages ne possède pas d’API : charger directement le catalogue publié.
+        catalogue=await readCatalogue(staticUrl);
+      }else{
+        try{catalogue=await readCatalogue('../api/documents');}
+        catch{catalogue=await readCatalogue(staticUrl);}
+      }
       documents = catalogue[category] || [];
       if (!documents.length) {
         select.replaceChildren(new Option('Aucun PDF disponible', ''));
@@ -83,7 +89,7 @@ export function mountPdfViewer() {
     if (!source || source !== viewer.contentWindow) return;
     const options = source.PDFViewerApplicationOptions;
     options.set('disablePreferences', true);
-    options.set('viewerCssTheme', 0); // Les deux thèmes sont définis dans atelier.css.
+    options.set('viewerCssTheme', 1); // Palette fixe, indépendante du système.
     options.set('annotationEditorMode', -1);
     options.set('annotationMode', 1);
     options.set('enableScripting', false);

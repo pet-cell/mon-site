@@ -13,6 +13,7 @@ module.exports = function versionAssets(output) {
   const files = walk(output).sort();
   const versioned = files.filter(file =>
     (file.startsWith('assets/js/') && file.endsWith('.js')) ||
+    (file.startsWith('assets/vendor/pdfjs/') && file.endsWith('.mjs')) ||
     (file.startsWith('assets/css/') && file.endsWith('.css')) ||
     (file.startsWith('components/') && file.endsWith('.html')) ||
     (file.startsWith('assets/games/') && file.endsWith('.html')) ||

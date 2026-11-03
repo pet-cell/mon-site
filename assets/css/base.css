@@ -47,6 +47,6 @@ html { scroll-behavior: auto; }
 }
 
 /* Les couleurs explicites restent identiques avec les thèmes clair et sombre du système. */
-:root { color-scheme:light dark; }
-button,input,select,textarea { color-scheme:inherit; accent-color:#d5784c; -webkit-text-fill-color:currentColor; }
+:root { color-scheme:only light; }
+button,input,select,textarea { color-scheme:only light; accent-color:#d5784c; -webkit-text-fill-color:currentColor; }
 select option { color:inherit; background-color:inherit; }

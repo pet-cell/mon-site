@@ -1,6 +1,6 @@
 :root {
-  /* Les deux thèmes sont pris en charge avec la palette du site. */
-  color-scheme: light dark;
+  /* Palette du site fixe : empêcher la conversion automatique en mode sombre. */
+  color-scheme: only light;
   --navy: #06172e;
   --orange: #ad4829;
   --orange-light: #d5784c;

@@ -1,3 +1,4 @@
+/* Distribution legacy officielle ; lien de source map retire pour la publication. */
 /* Copyright 2012 Mozilla Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
