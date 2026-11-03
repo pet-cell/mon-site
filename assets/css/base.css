@@ -33,6 +33,7 @@ html { scroll-behavior: auto; }
 }
 [hidden] { display: none !important; }
 .page-specific { margin-top: 30px; }
+.usage-note { margin:12px 0 0; color:#c8c9c4; font-size:11px; line-height:1.6; overflow-wrap:break-word; }
 
 /* Réserve vide en fin de page pour dégager les widgets fixes. */
 .home-layout::after { content:""; display:block; height:calc(var(--block-8-height, 90px) + 10px); }
