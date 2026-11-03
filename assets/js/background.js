@@ -198,26 +198,40 @@ function initializeCanvas(canvas) {
   let resizeTimer;
   let width = 0;
   let height = 0;
+  let pixelRatio = 0;
+  let layoutWidth = 0;
+  let layoutHeight = 0;
   let seeds;
   let tracks;
 
   function resize() {
     const ratio = Math.min(devicePixelRatio || 1, 2);
-    width = innerWidth;
-    height = innerHeight;
+    // Le canvas utilise la grande hauteur du viewport : les barres mobiles ne le redimensionnent pas.
+    const bounds = canvas.getBoundingClientRect();
+    const nextWidth = Math.max(1, Math.round(bounds.width));
+    const nextHeight = Math.max(1, Math.round(bounds.height));
+    if(nextWidth===width && nextHeight===height && ratio===pixelRatio)return;
+    width = nextWidth;
+    height = nextHeight;
+    pixelRatio = ratio;
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
-    canvas.style.width = width + 'px';
-    canvas.style.height = height + 'px';
-    context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    seeds = createGradientSeeds(width, height);
-    tracks = createCircuitTracks(width, height);
+    // Un seul tirage par ouverture de page, conservé aussi après rotation ou changement de résolution.
+    if(!seeds) {
+      layoutWidth=width;layoutHeight=height;
+      seeds = createGradientSeeds(layoutWidth, layoutHeight);
+      tracks = createCircuitTracks(layoutWidth, layoutHeight);
+    }
+    const scale=Math.max(width/layoutWidth,height/layoutHeight);
+    const offsetX=(width-layoutWidth*scale)/2;
+    const offsetY=(height-layoutHeight*scale)/2;
+    context.setTransform(ratio*scale,0,0,ratio*scale,ratio*offsetX,ratio*offsetY);
   }
 
   function render(time) {
     context.fillStyle = '#0a2548';
-    context.fillRect(0, 0, width, height);
-    drawGradients(context, seeds, time, width, height);
+    context.fillRect(0, 0, layoutWidth, layoutHeight);
+    drawGradients(context, seeds, time, layoutWidth, layoutHeight);
     drawCircuitTracks(context, tracks, time);
     requestAnimationFrame(render);
   }

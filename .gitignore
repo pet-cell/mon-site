@@ -75,3 +75,6 @@ verify*
 
 # Site généré automatiquement par GitHub Pages
 /dist/
+
+/to_process/
+/to-process/

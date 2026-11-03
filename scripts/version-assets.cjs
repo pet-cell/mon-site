@@ -15,7 +15,8 @@ module.exports = function versionAssets(output) {
     (file.startsWith('assets/js/') && file.endsWith('.js')) ||
     (file.startsWith('assets/css/') && file.endsWith('.css')) ||
     (file.startsWith('components/') && file.endsWith('.html')) ||
-    (file.startsWith('assets/games/') && file.endsWith('.html')));
+    (file.startsWith('assets/games/') && file.endsWith('.html')) ||
+    file === 'assets/vendor/pdfjs/web/viewer.html' || file === 'assets/vendor/pdfjs/web/atelier.css');
   const digest = crypto.createHash('sha256');
   digest.update(fs.readFileSync(__filename));
   for (const file of versioned) digest.update(file).update(fs.readFileSync(path.join(output, file)));
@@ -28,7 +29,12 @@ module.exports = function versionAssets(output) {
     const suffix = split < 0 ? '' : reference.slice(split);
     const target = reference.startsWith('assets/') || reference.startsWith('components/')
       ? bare : path.posix.normalize(path.posix.join(path.posix.dirname(from), bare));
-    const mapped = names.get(target);
+    let mapped = names.get(target);
+    // Le visionneur est référencé depuis l’adresse de la page, pas depuis celle du module JS.
+    if(!mapped && bare.startsWith('../assets/')) {
+      mapped=names.get(bare.slice(3));
+      if(mapped)return '../'+mapped+suffix;
+    }
     if (!mapped) return reference;
     if (reference.startsWith('assets/') || reference.startsWith('components/')) return mapped + suffix;
     const relative = path.posix.relative(path.posix.dirname(from), mapped);

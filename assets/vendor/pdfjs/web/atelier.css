@@ -3,3 +3,8 @@
 /* Consultation uniquement : aucune commande d’édition, d’enregistrement ou d’impression. */
 #editorModeButtons, #printButton, #downloadButton, #secondaryOpenFile,
 #secondaryPrint, #secondaryDownload, #editorUndoBar { display: none !important; }
+
+/* Personnalisation locale : palette fixe, y compris si des préférences PDF.js étaient enregistrées. */
+:root { color-scheme:only light !important; --button-disabled-opacity:.4; --hover-filter:brightness(.9); }
+.toolbar,#numPages { color:#eee4cf; }
+button,input,select,textarea { -webkit-text-fill-color:currentColor; }

@@ -1,4 +1,4 @@
-:host { display:block; container-type:inline-size; --bg:#08121e; --panel:#102236; --line:#365064; --text:#eee4cf; --muted:#a2b4c2; --accent:#d98d60; --cyan:#56d9ed; --green:#91d9a0; }
+:host { color-scheme:only light; display:block; container-type:inline-size; --bg:#08121e; --panel:#102236; --line:#365064; --text:#eee4cf; --muted:#a2b4c2; --accent:#d98d60; --cyan:#56d9ed; --green:#91d9a0; }
 * { box-sizing:border-box; }[hidden] { display:none!important; }
 .laser-lab { color:var(--text); background:var(--bg); border:1px solid #b8724e; font:13px Arial,Helvetica,sans-serif; }
 .lab-header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px; border-bottom:1px solid var(--line); }

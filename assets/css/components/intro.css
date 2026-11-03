@@ -1,29 +1,21 @@
-.intro { position: relative; display: grid; grid-template-columns: 36% 1fr; background: var(--cream); color: var(--ink); padding: 28px; gap: 30px; box-shadow: 8px 8px 0 #020c1b88; }
-.intro-image { min-height: 245px; position: relative; overflow: hidden; background: #13344c; }
-.intro-copy { align-self: center; }
-.intro-copy > p:not(.eyebrow) { max-width: 310px; font-size: 13px; line-height: 1.7; color: #52606a; }
-@media(max-width:1000px) {
-.intro { grid-template-columns: 1fr; gap: 15px; }
-}
-@media(max-width:1000px) {
-.intro-image { min-height: 150px; }
-}
-@media(max-width:1000px) {
-.intro-copy { padding-bottom: 8px; }
-}
-@media(max-width:650px) {
-.intro { grid-template-columns: 1fr; padding: 23px; }
-}
-@media(max-width:650px) {
-.intro-image { min-height: 180px; }
-}
-.intro-image img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-/* Mise en page compacte : proportions intactes, aucune mise à l’échelle du texte. */
+.intro { position:relative; display:block; background:var(--cream); color:var(--ink); padding:28px; box-shadow:8px 8px 0 #020c1b88; }
+.intro > h1 { margin:0 0 22px; }
+/* Le flottant laisse tous les paragraphes se poursuivre autour de l’image puis en dessous. */
+.intro-flow { display:flow-root; }
+.intro-image { float:left; width:18%; aspect-ratio:3/4; position:relative; overflow:hidden; background:#13344c; margin:0 20px 10px 0; }
+.intro-image img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
+.intro-copy { min-width:0; }
+.intro-copy > p { margin:0 0 1em; font-size:13px; line-height:1.7; color:#52606a; text-align:justify; text-justify:inter-word; hyphens:auto; overflow-wrap:break-word; }
+.intro-copy > p:last-child { margin-bottom:0; }
 @media(max-width:650px), (max-width:950px) and (pointer:coarse) {
-  .intro { grid-template-columns:minmax(70px,34fr) minmax(0,66fr); padding:12px; gap:12px; }
-  .intro-image { min-height:0; aspect-ratio:3/4; align-self:center; width:100%; }
-  .intro-image img { object-fit:contain; }
-  .intro-copy { min-width:0; padding:0; }
-  .intro-copy h1 { font-size:clamp(22px,5.5vw,29px); line-height:1.1; margin:7px 0; overflow-wrap:anywhere; }
-  .intro-copy > p:not(.eyebrow) { font-size:12px; line-height:1.45; margin:7px 0; }
+  .intro { padding:12px; }
+  .intro > h1 { font-size:clamp(22px,5.5vw,29px); line-height:1.1; margin:0 0 19px; overflow-wrap:anywhere; }
+  .intro-image { width:17%; margin:0 12px 8px 0; }
+  .intro-copy > p { font-size:12px; line-height:1.6; }
+}
+
+/* Agrandissement demandé pour le GIF de Rapports uniquement. */
+.intro-image--double { width:36%; }
+@media(max-width:650px), (max-width:950px) and (pointer:coarse) {
+  .intro-image--double { width:34%; }
 }

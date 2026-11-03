@@ -2,8 +2,8 @@
 export const pages = {
   "accueil": {
     "title": "Accueil",
-    "heading": "Des idées.\nDu caractère.",
-    "description": "Un aperçu de mon univers, entre création, exploration et projets.",
+    "heading": "Bienvenue sur mon site vitrine !",
+    "description": "Je m’appelle Peter BONNAUD et je suis doctorant en informatique, spécialisé en apprentissage automatique (machine learning) et en apprentissage profond (deep learning) appliqués à l’imagerie scientifique (microscopie de phase quantitative, fluorescence XRF et microscopie de fluorescence).",
     "info": [
       {
         "category": "Bienvenue",
@@ -31,8 +31,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/accueil/peter-bonnaud.jpg",
+    "imageAlt": "Portrait de Peter Bonnaud",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -44,52 +44,61 @@ export const pages = {
     "tiles": [
       {
         "title": "Rapports",
-        "description": "Les idées prennent forme.",
+        "description": "Découvrez mes travaux déterminants.",
         "href": "pages/document.html?category=rapports",
         "image": "assets/images/defaut_vignette_1.svg",
         "imageAlt": ""
       },
       {
         "title": "Présentation",
-        "description": "Des formes et des couleurs.",
+        "description": "Suivez / Revivez mes soutenances.",
         "href": "pages/document.html?category=presentations",
         "image": "assets/images/defaut_vignette_2.svg",
         "imageAlt": ""
       },
       {
         "title": "Jeux d’alignement",
-        "description": "Tester de nouvelles pistes.",
+        "description": "Parviendrez-vous à aligner ce montage optique ?",
         "href": "pages/jeux-alignement.html",
         "image": "assets/images/defaut_vignette_3.svg",
         "imageAlt": ""
       },
       {
         "title": "Projet scolaire",
-        "description": "Découvrir les coulisses.",
+        "description": "Quelques travaux jalonnant mes études.",
         "href": "pages/projet-scolaire.html",
         "image": "assets/images/defaut_vignette_4.svg",
         "imageAlt": ""
       },
       {
         "title": "IA embarquée",
-        "description": "Des outils et des expérimentations.",
+        "description": "De l’algorithme à la matière.",
         "href": "pages/ia-embarquee.html",
         "image": "assets/images/defaut_vignette_5.svg",
         "imageAlt": ""
       },
       {
         "title": "Contact",
-        "description": "Une idée ? Parlons-en.",
+        "description": "Des questions ? Contactez-moi !",
         "href": "pages/contact.html",
         "image": "assets/images/defaut_vignette_6.svg",
         "imageAlt": ""
       }
-    ]
+    ],
+    "introParagraphs": [
+      "Mon expertise porte principalement sur la conception sur mesure d’architectures neuronales. J’ai notamment travaillé avec des réseaux de neurones à valeurs complexes, sur des tâches de classification, de transfert de modalité et de résolution de problèmes inverses.",
+      "À travers ce site, je vous invite à découvrir une sélection de mes travaux, ainsi que mon parcours académique et professionnel. Les différents contenus présentés illustrent mes compétences techniques et mon approche de la recherche et du développement.",
+      "Ce site est également ma première expérience de vibe coding !",
+      "Les outils de génération de code assistée par intelligence artificielle occupent une place croissante dans le développement informatique. En réduisant considérablement le temps consacré à l’implémentation, ils ouvrent de nouvelles possibilités en matière de productivité et d’expérimentation.",
+      "Ce site en est un exemple concret : Malgré une expérience initiale limitée en HTML, j’ai pu le concevoir et le développer rapidement grâce à ces outils."
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "600 / 804"
   },
   "rapports": {
     "title": "Rapports",
     "heading": "Rapports",
-    "description": "Les rapports à consulter dans le visionneur PDF.",
+    "description": "La page Rapports est consacrée à la diffusion des différents travaux écrits qui ont jalonné mon parcours académique et professionnel.",
     "info": [
       {
         "id": "publication-small-2024",
@@ -151,8 +160,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/rapports/redaction-rapport.gif",
+    "imageAlt": "Animation montrant la rédaction de quelques lignes de code",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -160,12 +169,20 @@ export const pages = {
       "timeZone": "Europe/Paris",
       "city": "Paris",
       "locale": "fr-FR"
-    }
+    },
+    "introParagraphs": [
+      "Vous y trouverez des documents de nature et de maturité variées, allant de premières contributions modestes à des travaux scientifiques évalués et validés par les pairs.",
+      "Cette diversité témoigne de l’évolution de mes compétences, de ma rigueur scientifique et de mon approche de la recherche au fil des années.",
+      "J’ai choisi de conserver et de partager ces travaux, y compris les plus anciens, car il est difficile d’apprécier pleinement le chemin parcouru sans pouvoir en observer les différentes étapes."
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "485 / 193",
+    "imageScale": 2
   },
   "presentations": {
     "title": "Présentation",
     "heading": "Présentation",
-    "description": "Les présentations à consulter dans le visionneur PDF.",
+    "description": "La page Présentations est consacrée à la diffusion des différents supports visuels utilisés lors de mes soutenances.",
     "info": [
       {
         "id": "projet-rex-ii",
@@ -215,12 +232,15 @@ export const pages = {
       "timeZone": "Europe/Paris",
       "city": "Paris",
       "locale": "fr-FR"
-    }
+    },
+    "introParagraphs": [
+      "Ces documents sont directement associés aux travaux disponibles sur la page Rapports. Ils permettent de découvrir, de manière synthétique et visuelle, les principaux résultats obtenus dans le cadre de mes missions de recherche."
+    ]
   },
   "jeux": {
     "title": "Jeux d’alignement",
     "heading": "Jeux d’alignement",
-    "description": "",
+    "description": "L’alignement d’un faisceau laser constitue une étape incontournable dans de nombreuses expériences optiques. Cette opération, parfois délicate et chronophage, demande aux expérimentateurs patience et précision. Entre les imperfections des composants optiques, les pertes d’énergie à chaque réflexion et les caractéristiques de la source lumineuse, de nombreux facteurs viennent compliquer l’obtention d’un alignement satisfaisant.",
     "info": [
       {
         "category": "Jeux d’alignement",
@@ -250,12 +270,16 @@ export const pages = {
       "timeZone": "Europe/Paris",
       "city": "Paris",
       "locale": "fr-FR"
-    }
+    },
+    "introParagraphs": [
+      "Ce petit jeu vous propose une version volontairement simplifiée de cette problématique. La plupart des difficultés rencontrées dans un montage réel ont été écartées : la source laser est idéale, les miroirs sont parfaitement réfléchissants et aucune aberration optique ne vient perturber la propagation du faisceau. Seules subsistent les contraintes géométriques liées à l’orientation des miroirs et à la trajectoire du laser.",
+      "À votre tour de jouer ! Saurez-vous guider ce faisceau laser parfait à travers une succession de miroirs tout aussi parfaits ?"
+    ]
   },
   "scolaire": {
     "title": "Projet scolaire",
     "heading": "Projet scolaire",
-    "description": "Une sélection de projets à découvrir : contexte, réalisations et démonstrations.",
+    "description": "Après avoir suivi la regrettée licence Systèmes automatisés de l’Université de Poitiers, au sein de la faculté des Sciences fondamentales et appliquées, je me suis orienté vers le nouveau master Objets connectés, proposé par cette même université.",
     "info": [
       {
         "category": "Projet scolaire",
@@ -376,6 +400,9 @@ export const pages = {
         "videoTitle": "Connected Watch — démonstration",
         "videoCaption": "Démonstration de Connected Watch."
       }
+    ],
+    "introParagraphs": [
+      "Cette page rassemble quelques traces des travaux les plus marquants réalisés au cours de mon master. Vous y découvrirez notamment des projets de conception et de prototypage de systèmes embarqués, ma participation à différents événements organisés en collaboration avec des acteurs industriels, ainsi que mes premières expérimentations en traitement du signal à l’aide de techniques d’apprentissage machine (machine learning)."
     ]
   },
   "nouvelle": {

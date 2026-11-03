@@ -45,3 +45,8 @@ html { scroll-behavior: auto; }
 @media(max-width:650px) {
   .home-layout { padding-right:calc(18px + var(--mobile-scroll-gutter) + env(safe-area-inset-right,0px)); }
 }
+
+/* Les couleurs explicites restent identiques avec les thèmes clair et sombre du système. */
+:root { color-scheme:only light; }
+button,input,select,textarea { color-scheme:only light; accent-color:#d5784c; -webkit-text-fill-color:currentColor; }
+select option { color:inherit; background-color:inherit; }

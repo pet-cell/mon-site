@@ -83,6 +83,7 @@ export function mountPdfViewer() {
     if (!source || source !== viewer.contentWindow) return;
     const options = source.PDFViewerApplicationOptions;
     options.set('disablePreferences', true);
+    options.set('viewerCssTheme', 1); // Palette fixe, indépendante du système.
     options.set('annotationEditorMode', -1);
     options.set('annotationMode', 1);
     options.set('enableScripting', false);
