@@ -223,8 +223,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/presentations/bloc-creme.gif",
+    "imageAlt": "Compte à rebours animé de présentation",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -235,7 +235,9 @@ export const pages = {
     },
     "introParagraphs": [
       "Ces documents sont directement associés aux travaux disponibles sur la page Rapports. Ils permettent de découvrir, de manière synthétique et visuelle, les principaux résultats obtenus dans le cadre de mes missions de recherche."
-    ]
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "480 / 480"
   },
   "jeux": {
     "title": "Jeux d’alignement",
@@ -261,8 +263,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/jeux-alignement/bloc-creme.gif",
+    "imageAlt": "Animation d’un montage scientifique avec un laser",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -274,7 +276,10 @@ export const pages = {
     "introParagraphs": [
       "Ce petit jeu vous propose une version volontairement simplifiée de cette problématique. La plupart des difficultés rencontrées dans un montage réel ont été écartées : la source laser est idéale, les miroirs sont parfaitement réfléchissants et aucune aberration optique ne vient perturber la propagation du faisceau. Seules subsistent les contraintes géométriques liées à l’orientation des miroirs et à la trajectoire du laser.",
       "À votre tour de jouer ! Saurez-vous guider ce faisceau laser parfait à travers une succession de miroirs tout aussi parfaits ?"
-    ]
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "627 / 418",
+    "imageScale": 2
   },
   "scolaire": {
     "title": "Projet scolaire",
@@ -300,8 +305,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/projet-scolaire/bloc-creme.gif",
+    "imageAlt": "Animation d’un livre illustrant les projets scolaires",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -403,7 +408,9 @@ export const pages = {
     ],
     "introParagraphs": [
       "Cette page rassemble quelques traces des travaux les plus marquants réalisés au cours de mon master. Vous y découvrirez notamment des projets de conception et de prototypage de systèmes embarqués, ma participation à différents événements organisés en collaboration avec des acteurs industriels, ainsi que mes premières expérimentations en traitement du signal à l’aide de techniques d’apprentissage machine (machine learning)."
-    ]
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "440 / 440"
   },
   "nouvelle": {
     "title": "Nouvelle page",
@@ -464,8 +471,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/ia-embarquee/bloc-creme.png",
+    "imageAlt": "Illustration comparant deux circuits imprimés",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -507,7 +514,10 @@ export const pages = {
         "videoTitle": "Animation d’exemple",
         "videoCaption": "Animation de démonstration — à remplacer par la vidéo du projet."
       }
-    ]
+    ],
+    "imageFit": "contain",
+    "imageAspectRatio": "1774 / 887",
+    "imageScale": 2
   },
   "contact": {
     "title": "Contact",
@@ -533,8 +543,8 @@ export const pages = {
     "bannerSubtitle": "Imaginer. Concevoir. Créer.",
     "bannerImage": "assets/images/defaut_bandeau.svg",
     "bannerImageAlt": "",
-    "image": "assets/images/defaut_zone3.svg",
-    "imageAlt": "Composition géométrique orange et bleu",
+    "image": "assets/images/contact/bloc-creme.png",
+    "imageAlt": "Illustration de drones et de pigeons transportant une enveloppe",
     "infoLabel": "LE CARNET",
     "infoImage": "assets/images/defaut_zone5.svg",
     "infoImageAlt": "Composition géométrique de l’atelier",
@@ -566,6 +576,9 @@ export const pages = {
           "url": ""
         }
       ]
-    }
+    },
+    "imageFit": "contain",
+    "imageAspectRatio": "1774 / 887",
+    "imageScale": 2
   }
 };

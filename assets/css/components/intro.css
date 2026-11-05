@@ -14,7 +14,7 @@
   .intro-copy > p { font-size:12px; line-height:1.6; }
 }
 
-/* Agrandissement demandé pour le GIF de Rapports uniquement. */
+/* Agrandissement activé par imageScale: 2 dans la configuration de chaque page. */
 .intro-image--double { width:36%; }
 @media(max-width:650px), (max-width:950px) and (pointer:coarse) {
   /* Comme sur ordinateur, le texte s'écoule à côté du GIF puis en dessous. */
