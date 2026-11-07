@@ -85,7 +85,7 @@ Tout se règle dans assets/js/config/pages.js, pour chaque page :
 Les chemins sont relatifs à la racine : assets/images/ma-photo.jpg. Ajouter ses fichiers dans assets/images/, puis modifier la configuration. Aucun texte n’est incrusté sur les images.
 
 Les dessins d’exemple sont conservés dans assets/images/defaut_bandeau.svg, defaut_zone3.svg, defaut_zone5.svg et defaut_vignette_1.svg à defaut_vignette_4.svg. SVG est un format d’image vectoriel, éditable et net quelle que soit sa taille.
-Une image vide ou introuvable revient au visuel defaut correspondant. Les textes d’exemple sont sauvegardés dans assets/js/config/defaut_pages.js : ce fichier sert de référence pour restaurer une configuration. Les valeurs de secours utilisées à l’exécution sont dans defaults.js.
+Une image vide ou introuvable revient au visuel defaut correspondant. Les textes d’exemple sont sauvegardés localement dans .asset-originals/nettoyage-2026-11-07/configuration/defaut_pages.js : ce fichier sert de référence pour restaurer une configuration et n’est pas publié. Les valeurs de secours utilisées à l’exécution sont dans assets/js/config/defaults.js.
 Les PDF originaux restent dans leurs dossiers de rubrique ; ils n’ont pas été modifiés ni dupliqués.
 
 
@@ -131,7 +131,7 @@ Le composant project-browser.html et ses fichiers CSS/JS portent la sélection d
 Dans pages.contact.contact, configurer email, heading, description et profiles (service, label, url). Les trois services prévus sont linkedin, orcid et github. Un lien absent reste désactivé ; aucune adresse de profil n’est inventée.
 Le bouton Copier place l’adresse e-mail dans le presse-papiers. L’adresse n’est pas affichée : le bouton Mail rond utilise le même style que les profils. Si le presse-papiers moderne est refusé, une copie de secours est tentée ; en cas d’échec, une erreur explicite est affichée. Aucun message n’est envoyé par le site et aucun identifiant Gmail n’est nécessaire.
 
-Les nouveaux exemples sont aussi conservés dans defaut_pages.js ; l’adresse personnelle n’est pas recopiée dans cet exemple.
+Les nouveaux exemples sont aussi conservés dans la copie locale archivée de defaut_pages.js ; l’adresse personnelle n’est pas recopiée dans cet exemple.
 Après mise à jour de preview.cjs, relancer lancer-site.cmd pour activer les types MIME des vidéos WebM et MP4.
 node verify-pages.cjs vérifie les nouvelles destinations, les listes de projets, les médias, les changements de contenu et la copie de l’adresse e-mail.
 

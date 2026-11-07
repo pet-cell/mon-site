@@ -27,10 +27,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/accueil/peter-bonnaud.jpg",
     "imageAlt": "Portrait de Peter Bonnaud",
     "infoLabel": "LE CARNET",
@@ -46,14 +46,14 @@ export const pages = {
         "title": "Rapports",
         "description": "Découvrez mes travaux déterminants.",
         "href": "pages/document.html?category=rapports",
-        "image": "assets/images/defaut_vignette_1.svg",
+        "image": "assets/images/vignettes/rapports.png",
         "imageAlt": ""
       },
       {
         "title": "Présentation",
         "description": "Suivez / Revivez mes soutenances.",
         "href": "pages/document.html?category=presentations",
-        "image": "assets/images/defaut_vignette_2.svg",
+        "image": "assets/images/vignettes/presentations.png",
         "imageAlt": ""
       },
       {
@@ -67,14 +67,14 @@ export const pages = {
         "title": "Projet scolaire",
         "description": "Quelques travaux jalonnant mes études.",
         "href": "pages/projet-scolaire.html",
-        "image": "assets/images/defaut_vignette_4.svg",
+        "image": "assets/images/vignettes/projet-scolaire.png",
         "imageAlt": ""
       },
       {
         "title": "IA embarquée",
         "description": "De l’algorithme à la matière.",
         "href": "pages/ia-embarquee.html",
-        "image": "assets/images/defaut_vignette_5.svg",
+        "image": "assets/images/vignettes/ia-embarquee.png",
         "imageAlt": ""
       },
       {
@@ -156,10 +156,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/rapports/redaction-rapport.gif",
     "imageAlt": "Animation montrant la rédaction de quelques lignes de code",
     "infoLabel": "LE CARNET",
@@ -219,10 +219,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/presentations/bloc-creme.gif",
     "imageAlt": "Compte à rebours animé de présentation",
     "infoLabel": "LE CARNET",
@@ -259,10 +259,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/jeux-alignement/bloc-creme.gif",
     "imageAlt": "Animation d’un montage scientifique avec un laser",
     "infoLabel": "LE CARNET",
@@ -301,10 +301,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/projet-scolaire/bloc-creme.gif",
     "imageAlt": "Animation d’un livre illustrant les projets scolaires",
     "infoLabel": "LE CARNET",
@@ -432,10 +432,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/defaut_zone3.svg",
     "imageAlt": "Composition géométrique orange et bleu",
     "infoLabel": "LE CARNET",
@@ -467,10 +467,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/ia-embarquee/bloc-creme.png",
     "imageAlt": "Illustration comparant deux circuits imprimés",
     "infoLabel": "LE CARNET",
@@ -539,10 +539,10 @@ export const pages = {
         "imageAlt": "Composition géométrique de l’atelier"
       }
     ],
-    "bannerText": "ATELIER",
-    "bannerSubtitle": "Imaginer. Concevoir. Créer.",
-    "bannerImage": "assets/images/defaut_bandeau.svg",
-    "bannerImageAlt": "",
+    "bannerText": "PORTFOLIO",
+    "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
+    "bannerImage": "assets/images/bandeau/lettrine-pb-petite.png",
+    "bannerImageAlt": "Monogramme PB",
     "image": "assets/images/contact/bloc-creme.png",
     "imageAlt": "Illustration de drones et de pigeons transportant une enveloppe",
     "infoLabel": "LE CARNET",

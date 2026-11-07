@@ -1,6 +1,6 @@
 export const defaults = {
-  "bannerText": "ATELIER",
-  "bannerSubtitle": "Imaginer. Concevoir. Créer.",
+  "bannerText": "PORTFOLIO",
+  "bannerSubtitle": "Imaginer, concevoir, tester… recommencer",
   "bannerImage": "assets/images/defaut_bandeau.svg",
   "image": "assets/images/defaut_zone3.svg",
   "infoLabel": "LE CARNET",

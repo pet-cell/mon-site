@@ -20,7 +20,7 @@ export function mountPdfViewer() {
     }
     const url = new URL('../assets/vendor/pdfjs/web/viewer.html', location.href);
     url.searchParams.set('file', pdf.href);
-    url.hash = mobileScreen.matches?'zoom=page-width':'zoom=75';
+    url.hash = mobileScreen.matches?'zoom=page-width':category==='presentations'?'zoom=60':'zoom=75';
     status.hidden = false;
     status.textContent = `Ouverture de ${entry.title}…`;
     viewer.hidden = false;
