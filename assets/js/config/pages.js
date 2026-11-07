@@ -450,7 +450,12 @@ export const pages = {
   "embarque": {
     "title": "IA embarquée",
     "heading": "IA embarquée",
-    "description": "Expérimentations, outils et premiers pas autour de l’intelligence artificielle embarquée.",
+    "description": "La conception d’architectures neuronales est un exercice intellectuellement stimulant. Toutefois, son produit final reste souvent intangible et immatériel. Tout comme il peut être difficile de mesurer sa propre progression au fil des apprentissages, il n’est pas toujours évident d’apprécier pleinement l’aboutissement d’un travail dont le résultat demeure essentiellement logiciel.",
+    "introParagraphs": [
+      "Cette page est consacrée à ma progression vers l’intégration de modèles neuronaux au sein de systèmes physiques, qu’ils soient industriels, robotiques ou embarqués.",
+      "Elle témoigne de mon ambition de faire évoluer progressivement mon profil technique vers celui d’un ingénieur capable de concevoir des systèmes embarqués complexes, combinant différentes technologies et intégrant des réseaux de neurones.",
+      "Cette ambition s’inscrit naturellement dans la continuité de mon parcours : une formation académique principalement orientée vers la programmation et les systèmes embarqués, suivie d’une spécialisation professionnelle et scientifique dans la conception de modèles d’intelligence artificielle."
+    ],
     "info": [
       {
         "category": "IA embarquée",
@@ -522,7 +527,11 @@ export const pages = {
   "contact": {
     "title": "Contact",
     "heading": "Gardons le contact.",
-    "description": "Une question, une idée ou l’envie de travailler ensemble ?",
+    "description": "Si vous souhaitez me contacter, que ce soit pour échanger autour de mes travaux, discuter d’une opportunité professionnelle ou simplement entrer en relation, vous pouvez me joindre par e-mail ou via LinkedIn.",
+    "introParagraphs": [
+      "Les boutons ci-dessous vous permettront d’accéder directement à ces différents moyens de contact.",
+      "P.-S. : N’oubliez pas de nourrir nos pigeons voyageurs, ils vivent mal le chômage…"
+    ],
     "info": [
       {
         "category": "Échanger",
