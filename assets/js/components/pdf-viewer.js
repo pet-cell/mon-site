@@ -94,6 +94,7 @@ export function mountPdfViewer() {
     options.set('annotationMode', 1);
     options.set('enableScripting', false);
     options.set('defaultZoomValue', mobileScreen.matches?'page-width':'0.75');
+    options.set('sidebarViewOnLoad', 0); // PDF.js : panneau latéral fermé au démarrage.
     const app = source.PDFViewerApplication;
     for (const method of ['download', 'save', 'downloadOrSave', 'triggerPrinting']) app[method] = async () => {};
     source.addEventListener('keydown', keyboardEvent => {

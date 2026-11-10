@@ -1,9 +1,26 @@
 {
   "rapports": [
     {
-      "title": "Projets",
-      "file": "rapports/Projets.pdf"
+      "title": "Paper nanoparticle HAL version",
+      "file": "rapports/Paper_nanoparticle_HAL_version.pdf"
+    },
+    {
+      "title": "Rapport stage Master 1",
+      "file": "rapports/Rapport_stage_Master_1.pdf"
+    },
+    {
+      "title": "Rapport stage Master 2",
+      "file": "rapports/Rapport_stage_Master_2.pdf"
     }
   ],
-  "presentations": []
+  "presentations": [
+    {
+      "title": "Caviardage Marie Antoinette REXII",
+      "file": "presentations/Caviardage_Marie_Antoinette_REXII.pdf"
+    },
+    {
+      "title": "Stage M2 BONNAUD Peter",
+      "file": "presentations/Stage_M2_BONNAUD_Peter.pdf"
+    }
+  ]
 }

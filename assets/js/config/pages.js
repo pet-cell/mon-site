@@ -378,19 +378,22 @@ export const pages = {
       },
       {
         "id": "irm-segmentation",
-        "title": "IRM Segmentation",
+        "title": "CT scan segmentation - cardiaque",
         "category": "Projet scolaire",
-        "summary": "Présentation de IRM Segmentation.",
-        "paragraphs": [
-          "Cet exemple accueille la présentation du projet : son contexte, ses objectifs et la démarche suivie.",
-          "Ajoutez ici les étapes, les choix techniques et les résultats que vous souhaitez partager."
+        "summary": "",
+        "introParagraphs": [
+          "Pour ce projet, nous souhaitions isoler automatiquement la région cardiaque dans des images de scanner CT. Nous avons utilisé un réseau neuronal de type U-Net, qui apprend à distinguer les pixels appartenant à la région cardiaque à partir de coupes et de masques annotés. Les données issues de fichiers DICOM sont préparées au format NRRD. Les images sont ensuite redimensionnées à 168 × 168 pixels et chargées par lots de 16 pour l’entraînement.",
+          "L’encodeur de l’U-Net réduit progressivement la résolution des images pour en extraire les caractéristiques. À partir de leur représentation dans l’espace latent, le décodeur augmente progressivement la résolution pour localiser la région cardiaque. Les connexions directes entre l’encodeur et le décodeur aident à préserver les détails spatiaux."
         ],
-        "image": false,
-        "imageAlt": "Illustration géométrique d’un projet",
-        "video": "assets/videos/defaut_projet.webm",
+        "paragraphs": [
+          "Après l’entraînement sur les données annotées, le réseau peut segmenter la région cardiaque dans un volume 3D issu d’un scanner CT."
+        ],
+        "image": "assets/images/projet-scolaire/unet-latent-space.png",
+        "imageAlt": "Schéma de l’U-Net et de son espace latent",
+        "video": "assets/videos/segmentation-cardiaque.mp4",
         "videoPoster": "first-frame",
-        "videoTitle": "Animation d’exemple",
-        "videoCaption": "Animation de démonstration — à remplacer par la vidéo du projet."
+        "videoTitle": "Démonstration de segmentation cardiaque",
+        "videoCaption": "Segmentation de la région cardiaque dans un volume de scanner CT."
       },
       {
         "id": "connected-watch",

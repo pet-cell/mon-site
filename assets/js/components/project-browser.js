@@ -17,6 +17,11 @@ export function mountProjectBrowser(page, rootUrl) {
     const heading=document.createElement('h2');heading.id='project-title';heading.textContent=project.title;
     const summary=document.createElement('p');summary.className='project-summary';summary.textContent=project.summary || '';
     content.append(category,heading,summary);
+    for (const text of project.introParagraphs || []) {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      content.append(paragraph);
+    }
     if(project.image!==false) {
     const figure=document.createElement('figure');
     const image=document.createElement('img');image.loading='lazy';
