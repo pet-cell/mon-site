@@ -321,7 +321,10 @@ export const pages = {
         "title": "AI4Industry 2022",
         "category": "Projet scolaire",
         "summary": "",
-        "paragraphs": [],
+        "paragraphs": [
+          "Pour ce projet, nous devions poser les bases d’une indexation automatique d’images.",
+          "Nous avons d’abord nettoyé le jeu de données, principalement en dédoublonnant les images. Nous avons ensuite testé plusieurs façons de représenter les images afin de mieux séparer les classes. DenseNet a obtenu les meilleurs résultats parmi les architectures de réseaux de neurones testées. À taux d’erreur comparable, nous avons recommandé les méthodes classiques pour leur coût de calcul plus faible en prédiction et leur plus grande facilité d’interprétation."
+        ],
         "image": false,
         "imageAlt": "Illustration géométrique d’un projet",
         "videoPoster": "first-frame",
@@ -364,10 +367,12 @@ export const pages = {
         "id": "q-learner-speedrunner",
         "title": "Q-Learner / Speedrunner",
         "category": "Projet scolaire",
-        "summary": "Présentation de Q-Learner / Speedrunner.",
+        "summary": "",
         "paragraphs": [
-          "Cet exemple accueille la présentation du projet : son contexte, ses objectifs et la démarche suivie.",
-          "Ajoutez ici les étapes, les choix techniques et les résultats que vous souhaitez partager."
+          "Pour ce projet, j’ai conçu un agent neuronal entraîné par apprentissage par renforcement. Son premier objectif était de trouver la sortie d’un petit labyrinthe. Pendant l’entraînement, l’agent explore le labyrinthe en essayant différents déplacements. Les récompenses qu’il reçoit lui permettent d’apprendre quelles actions privilégier selon sa situation.",
+          "Les cases orange forment les chemins du labyrinthe. Les cases rouges sont des pièges qui renvoient l’agent à la case de départ, en gris. La sortie est indiquée en vert et une pièce jaune constitue un objectif secondaire.",
+          "J’ai ensuite modifié la fonction de récompense pour encourager l’agent à récupérer la pièce avant de sortir. La récompense associée à la pièce rend le détour avantageux. L’agent apprend ainsi à passer par la case jaune, puis à rejoindre la sortie.",
+          "Enfin, j’ai modifié la récompense pour favoriser les trajets les plus courts. Au cours de l’exploration, l’agent apprend à emprunter volontairement une case piégée lorsque le retour au départ lui permet de raccourcir son trajet. Cette stratégie s’appelle le deathwarp. Elle est utilisée par les speedrunners, des joueurs qui cherchent à terminer un jeu le plus rapidement possible. Dans ce projet, le raccourci émerge de l’apprentissage, sans que j’aie programmé cette stratégie dans l’agent."
         ],
         "image": false,
         "imageAlt": "Illustration géométrique d’un projet",
